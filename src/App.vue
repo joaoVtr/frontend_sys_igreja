@@ -1,26 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <nav class="space-x-5 mx-auto mt-6 text-center">
+    <router-link
+      class="font-bold text-2xl hover:border-b hover:border-blue-500"
+      to="/"
+      >Home</router-link
+    >
+    <router-link
+      class="font-bold text-2xl hover:border-b hover:border-blue-500"
+      to="/members"
+      >Membros</router-link
+    >
+    <router-link
+      class="font-bold text-2xl hover:border-b hover:border-blue-500"
+      to="/churches"
+      >Igrejas</router-link
+    >
+  </nav>
+  <router-view class="container mx-auto text-center" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  components: {},
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+nav a.router-link-active {
+  color: rgba(26, 60, 201, 0.8);
 }
 </style>
